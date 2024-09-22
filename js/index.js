@@ -39,8 +39,9 @@ document.getElementById('calculate').addEventListener('click', function () {
     console.table({income, software, courses, internet})
 
 
-    //NOTE: eta live validation na. calculate button e click korar por validatin dekhabe. tobe live validation best practice. live validatio ta niche comment kora rakha ache. ei code comment kore  live validation er code comment out korle kaz korbe.
+    //NOTE: eta live validation na. calculate button e click korar por validatin dekhabe. tobe live validation best practice. live validatio ta niche kora kora hoyeche.
     //TODO: input validation after calculate button click
+    /*
     if(income < 0 || isNaN(income)){
         //document.getElementById('income-error').classList.remove('hidden');
         //fuction call
@@ -65,6 +66,7 @@ document.getElementById('calculate').addEventListener('click', function () {
         showError('internet-error');
         return;
     }
+        */
 
 
 
@@ -208,7 +210,7 @@ assistantTab.addEventListener('click', function(){
 
 })
 
-/*
+
 
 //TODO: live validation for input START
 document.getElementById('income').addEventListener('input', function(){
@@ -266,4 +268,3 @@ document.getElementById('internet').addEventListener('input', function(){
 
 //END: live validation for input END
 
-*/
