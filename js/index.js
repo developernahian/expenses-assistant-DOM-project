@@ -20,9 +20,44 @@ document.getElementById('calculate').addEventListener('click', function () {
     console.table({income, software, courses, internet})
 
 
+    /*
+    //TODO: input validation after calculate button click
+    if(income < 0 || isNaN(income)){
+        document.getElementById('income-error').classList.remove('hidden');
+        return;
+    }
+
+    if(software < 0 || isNaN(software)){
+        document.getElementById('software-error').classList.remove('hidden');
+        return;
+    }
+
+    if(courses < 0 || isNaN(courses)){
+        document.getElementById('courses-error').classList.remove('hidden');
+        return;
+    }
+
+    if(internet < 0 || isNaN(internet)){
+        document.getElementById('internet-error').classList.remove('hidden');
+        return;
+    }
+
+    */
+
+
+
     const totalExpenses = software + courses + internet;
     const balance = income - totalExpenses;
     console.table({totalExpenses, balance})
+
+
+    //TODO: validation (income theke total expenses big hole error dekhabe)
+    if(totalExpenses > income){
+        document.getElementById('logic-error').classList.remove('hidden');
+        return;
+    }
+
+
 
 
     // const totalExpensesElement = document.getElementById('total-expenses');
@@ -143,3 +178,61 @@ assistantTab.addEventListener('click', function(){
     document.getElementById('history-section').classList.add('hidden')
 
 })
+
+
+
+//TODO: live validation for input START
+document.getElementById('income').addEventListener('input', function(){
+    const inputValue = parseFloat(document.getElementById('income').value);
+
+    console.log(inputValue);
+
+    if(isNaN(inputValue) || inputValue < 0){
+        document.getElementById('income-error').classList.remove('hidden');
+        return;
+
+    }
+
+})
+
+
+document.getElementById('software').addEventListener('input', function(){
+    const inputValue = parseFloat(document.getElementById('software').value);
+
+    console.log(inputValue);
+
+    if(isNaN(inputValue) || inputValue < 0){
+        document.getElementById('software-error').classList.remove('hidden');
+        return;
+
+    }
+
+})
+
+document.getElementById('courses').addEventListener('input', function(){
+    const inputValue = parseFloat(document.getElementById('courses').value);
+
+    console.log(inputValue);
+
+    if(isNaN(inputValue) || inputValue < 0){
+        document.getElementById('courses-error').classList.remove('hidden');
+        return;
+
+    }
+
+})
+
+document.getElementById('internet').addEventListener('input', function(){
+    const inputValue = parseFloat(document.getElementById('internet').value);
+
+    console.log(inputValue);
+
+    if(isNaN(inputValue) || inputValue < 0){
+        document.getElementById('internet-error').classList.remove('hidden');
+        return;
+
+    }
+
+})
+
+//END: live validation for input END
