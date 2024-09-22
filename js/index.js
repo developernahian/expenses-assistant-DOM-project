@@ -126,3 +126,20 @@ historyTab.addEventListener('click', function(){
 
 
 });
+
+
+//TODO: assistant tab click korle history tab hide hoye assistant tab open hobe and button color change hobe
+//assistantTab ei variable ta global variable hisebe upore declear kora hoyeche
+assistantTab.addEventListener('click', function(){
+    console.log('assistant tab clicked');
+
+    assistantTab.classList.add('text-white', 'bg-gradient-to-r', 'from-blue-500', 'to-purple-600');
+    assistantTab.classList.remove('text-gray-600');
+
+    historyTab.classList.remove('text-white', 'bg-gradient-to-r', 'from-blue-500', 'to-purple-600');
+    historyTab.classList.add('text-gray-600');
+
+    document.getElementById('expense-form').classList.remove('hidden')
+    document.getElementById('history-section').classList.add('hidden')
+
+})
