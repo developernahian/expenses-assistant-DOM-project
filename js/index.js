@@ -1,5 +1,13 @@
-//global variable
+//TODO:global variable
 let count = 0;
+
+//TODO: function to get input value
+function getInputValueById(id){
+    return parseFloat(document.getElementById(id).value);
+}
+
+
+
 
 //TODO: add event listener for calculate button
 // const calculateButton = document.getElementById('calculate');
@@ -9,12 +17,18 @@ let count = 0;
 document.getElementById('calculate').addEventListener('click', function () {
     console.log('calculate button clicked');
 
+    //TODO: count increment
     count = count + 1;
 
-    const income = parseFloat(document.getElementById('income').value);
-    const software = parseFloat(document.getElementById('software').value);
-    const courses = parseFloat(document.getElementById('courses').value);
-    const internet = parseFloat(document.getElementById('internet').value);
+    // const income = parseFloat(document.getElementById('income').value);
+    // const software = parseFloat(document.getElementById('software').value);
+    // const courses = parseFloat(document.getElementById('courses').value);
+    // const internet = parseFloat(document.getElementById('internet').value);
+    // get value from function
+    const income = getInputValueById('income');
+    const software = getInputValueById('software');
+    const courses = getInputValueById('courses');
+    const internet = getInputValueById('internet');
     console.log(income, software, courses, internet)
     console.log({income, software, courses, internet})
     console.table({income, software, courses, internet})
@@ -119,10 +133,15 @@ document.getElementById('calculate-savings').addEventListener('click', function(
 
 
 
-    const income = parseFloat(document.getElementById('income').value);
-    const software = parseFloat(document.getElementById('software').value);
-    const courses = parseFloat(document.getElementById('courses').value);
-    const internet = parseFloat(document.getElementById('internet').value);
+    // const income = parseFloat(document.getElementById('income').value);
+    // const software = parseFloat(document.getElementById('software').value);
+    // const courses = parseFloat(document.getElementById('courses').value);
+    // const internet = parseFloat(document.getElementById('internet').value);
+    // get value from function
+    const income = getInputValueById('income');
+    const software = getInputValueById('software');
+    const courses = getInputValueById('courses');
+    const internet = getInputValueById('internet');
 
     //todo calculate balance
     const totalExpenses = software + courses + internet;
